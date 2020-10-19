@@ -30,14 +30,19 @@ function RightMenu(props) {
         </Menu.Item>
       </Menu>
     )
+    // 로그인 안한 사람들 랜더링
   } else {
     return (
       <Menu mode={props.mode}>
+         <Menu.Item key="upload">
+          <a href="/video/upload">Signup</a>
+        </Menu.Item>
         <Menu.Item key="logout">
           <a onClick={logoutHandler}>Logout</a>
         </Menu.Item>
       </Menu>
     )
+     // 로그인 한 사람들 랜더링
   }
 }
 
