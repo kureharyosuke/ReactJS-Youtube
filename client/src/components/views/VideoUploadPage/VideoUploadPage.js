@@ -47,6 +47,7 @@ function VideoUploadPage() {
         setCategory(e.currentTarget.value)
     }
 
+    // Drop Zone
     const onDrop = (files) => {
         
         let formData = new FormData;
@@ -60,7 +61,7 @@ function VideoUploadPage() {
 
         Axios.post('/api/video/uploadfiles', formData, config).then(response => { 
             if(response.data.success) {
-
+                console.log(response.data)
             }else {
                 alert('비디오 업로드를 실패하였습니다.')
             }
